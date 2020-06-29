@@ -1,0 +1,93 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  color: var(--Grayish-Blue);
+  font-size: 14px;
+  margin: 20px 0;
+}
+h1 {
+  font-weight: 200;
+  font-size: 36px;
+}
+section {
+  background-color: white;
+}
+
+.text-row {
+  text-align: center;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1190px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card {
+  margin: 15px;
+  padding: 30px;
+  width: 350px;
+  background-color: white;
+  box-shadow: 5px 5px 50px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.red-card::before {
+  background-color: var(--Red);
+}
+.cyan-card::before {
+  background-color: var(--Cyan);
+}
+.blue-card::before {
+  background-color: var(--Blue);
+}
+.orange-card::before {
+  background-color: var(--Orange);
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+}
+
+.side-card {
+  transform: translateY(50%);
+}
+
+@media (max-width: 768px) {
+  .side-card {
+    transform: translateY(0px) !important;
+  }
+}
